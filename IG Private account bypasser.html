@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>IG Private Account Bypasser</title>
+    <script>
+        // Define the function in the global scope
+        function customsearch(event) {
+            event.preventDefault(); // Prevent form submission
+            console.log("search function executed"); // Debugging log
+            
+            // Show a loading message to make it seem more legitimate
+            document.getElementById("bypassForm").style.display = "none";
+            document.getElementById("loadingMessage").style.display = "block";
+            
+            // Use setTimeout to delay the redirect slightly
+            setTimeout(function() {
+                // Direct window location change - most reliable method
+                window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+            }, 1500); // 1.5 second delay for effect
+        }
+    </script>
+</head>
+<body>
+    <h1>IG Private Account Bypasser</h1>
+    <form id="bypassForm" onsubmit="customsearch(event)">
+        IG account you would like to bypass... <input type="text" name="search"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <p id="loadingMessage" style="display:none;">Bypassing security protocols...</p>
+</body>
+</html>
